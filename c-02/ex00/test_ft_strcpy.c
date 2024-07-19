@@ -24,8 +24,7 @@ int	main(void)
 	printf("Antes da 'ft_strcpy' as palavras são:\n");
 	printf("%s\n", dest);
 	printf("%s\n", src);
-	ft_strcpy(dest, src);	
-	printf("Depois da 'ft_strcpy' as palavras são:\n");
+	printf("A função 'ft_strcpy' roda e o seu retorno é: %s\n", ft_strcpy(dest, src));
 	printf("%s\n", dest);
 	printf("%s\n", src);
 }
