@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_printable.c                              :+:      :+:    :+:   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: adsorodr <adsorodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/22 12:12:23 by adsorodr          #+#    #+#             */
-/*   Updated: 2024/07/22 12:39:47 by adsorodr         ###   ########.fr       */
+/*   Created: 2024/07/22 12:40:47 by adsorodr          #+#    #+#             */
+/*   Updated: 2024/07/22 12:46:23 by adsorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_str_is_printable(char *str)
+char	*ft_strlowcase(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i])
 	{
-		if (!((str[i] >= 32) && (str[i] <= 126)))
-		{
-			return (0);
-		}
+		if ((str[i] >= 'A') && (str[i] <= 'Z'))
+			str[i] += 32;
 		i++;
 	}
-	return (1);
+	return (str);
 }

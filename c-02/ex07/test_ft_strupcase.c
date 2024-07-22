@@ -1,9 +1,9 @@
 #include <stdio.h>
-#include "ft_str_is_printable.c"
+#include "ft_strupcase.c"
 
 int	main()
 {
 	char str[] = "!#$&' ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnpqrstuvwxyz";
 
-	printf("%d", ft_str_is_printable(str));
+	printf("%s", ft_strupcase(str));
 }
