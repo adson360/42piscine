@@ -6,7 +6,7 @@
 /*   By: adsorodr <adsorodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 12:47:58 by adsorodr          #+#    #+#             */
-/*   Updated: 2024/07/22 14:56:44 by adsorodr         ###   ########.fr       */
+/*   Updated: 2024/07/26 15:34:44 by adsorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ char	*ft_strcapitalize(char *str)
 	{
 		if (!((chk_lowercase(str[i - 1]))
 				|| (chk_uppercase(str[i - 1]))
-				|| chk_numeric(str[1 - 1])))
+				|| chk_numeric(str[i - 1])))
 		{
 			if (chk_lowercase(str[i]))
 			str[i] -= 32;
