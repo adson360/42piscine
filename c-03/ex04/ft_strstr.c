@@ -6,38 +6,36 @@
 /*   By: adsorodr <adsorodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 18:06:08 by adsorodr          #+#    #+#             */
-/*   Updated: 2024/07/28 21:17:31 by adsorodr         ###   ########.fr       */
+/*   Updated: 2024/07/29 14:38:47 by adsorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while ((*(s1 + i) == *(s2 + i)) && *(s1 + i) && *(s2 + i))
+		i++;
+	return (*(s1 + i) - *(s2 + i));
+}
 
 char	*ft_strstr(char *str, char *to_find)
 {
     int    i;
-    int    j;
-    
-    
+  
 	i = 0;
-	j = 0;
-	while (*(to_find + i) != '\0')
+	if ((*to_find) == '\0')
+		return (str);
+	while (*(str + i))
 	{
-		j = 0;
-		while(*(str + j) != *(to_find) && *(str + i))
-		{
-			j++;
-		}
-		while(*(str + j) == *(to_find + i) && *(to_find + i) && *(str + j))
-		{
+		while (ft_strcmp((str + i), (to_find)) < 0)
 			i++;
-			j++;
-		}
-		if (!*(to_find + i))
-			return (str + j - i);
-		else
-			i = 0;
+		if (ft_strcmp((str + i), (to_find)) >= 0)
+			return (str + i);
 		i++;
 	}
-
-    return (str + i);
+    return (0);
 }
 
 	// e = 0;

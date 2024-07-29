@@ -7,7 +7,7 @@
 
 int	main()
 {
-	char	hs[] = "abdcadef";
+	char	hs[] = "";
 	char	nd[] = "de";
 
 	printf("%s\n", strstr(hs, nd));
