@@ -7,7 +7,7 @@
 
 int	main()
 {
-	char	hs[] = "";
+	char	hs[] = "ffdeff";
 	char	nd[] = "de";
 
 	printf("%s\n", strstr(hs, nd));
