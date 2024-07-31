@@ -7,9 +7,34 @@
 
 int	main()
 {
-	char	hs[] = "ffdeff";
-	char	nd[] = "de";
+	char	hs[] = "ffffffdfffffffdeffff";
+	char	nd[] = "f ";
 
 	printf("%s\n", strstr(hs, nd));
 	printf("%s\n", ft_strstr(hs, nd));
 }
+/*
+ffffffdfffffffdeffff
+de
+	*******
+ffffffdfffffffdeffff
+
+	*******
+
+
+	*******
+
+de
+	*******
+de
+de
+	*******
+de
+ffffffdfffffffdeffff
+	*******
+fffffffde
+de
+	*******
+fffffffde
+f 
+*/
