@@ -4,8 +4,8 @@
 
 int	main()
 {
-	char			str1[]="apple";
-	char			str2[]="lima";
+	char			str1[]="";
+	char			str2[]="";
 	unsigned int	n = 2;
 
 	printf("%d\n", strncmp(str1, str2, n));

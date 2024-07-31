@@ -2,18 +2,11 @@
 
 int main()
 {
-	unsigned int a = -5;
+	unsigned int a = 0;
+	unsigned int b = 0;
 	
-	if ((unsigned int)-5 > -1)
+	if (a < (b - 1))
 	{
-		printf("%d", a);
+		printf("Imprimir");
 	}
 }
-
-
-
-// (a <= (b-1))
-// (a < b)
-
-
-// -1 -> 
