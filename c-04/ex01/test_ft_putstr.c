@@ -1,7 +1,8 @@
-#include "ft_atoi_base.c"
+#include "ft_putstr.c"
 
 int	main()
 {
-//void ft_putstr(char *str);
+	char	str[] = "zero";
 
+	ft_putstr(str);
 }

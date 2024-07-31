@@ -1,9 +1,14 @@
 #include "ft_strlen.c"
-
-#include "ft_atoi_base.c"
+#include <stdio.h>
 
 int	main()
 {
-//int ft_strlen(char *str);
+	char	str[] = "";
 
+	printf("\t%d\n", ft_strlen(str));
 }
+
+/*
+abcdefgh
+8
+*/

@@ -2,6 +2,5 @@
 
 int	main()
 {
-// void ft_putnbr(int nb);
-
+	ft_putnbr(-2147483648);
 }
