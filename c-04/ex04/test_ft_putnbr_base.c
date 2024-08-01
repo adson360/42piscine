@@ -2,5 +2,5 @@
 
 int	main()
 {
-	ft_putnbr_base(1200, "0123456789");
+	ft_putnbr_base(120, "0123456789ABCDEF");
 }

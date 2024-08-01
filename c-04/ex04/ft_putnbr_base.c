@@ -6,7 +6,7 @@
 /*   By: adsorodr <adsorodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:19:04 by adsorodr          #+#    #+#             */
-/*   Updated: 2024/07/31 19:29:25 by adsorodr         ###   ########.fr       */
+/*   Updated: 2024/07/31 21:47:32 by adsorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,19 +41,31 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_put // implementar um mínimo-recursivo aqui
+void	put_converted_gt0(int nbr, int size, char *base)
+{
+	int	temp;
+	if (nbr >= size)
+	{
+		temp = nbr / size;
+		put_converted_gt0(temp, size, base);
+	}
+	ft_putchar(base[nbr % size]);
+	
+}
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	int		n;
+	// int		n;
 	int		size;
-	char	*tmp;
+	// char	*tmp;
 
 	size = count_check(base);
 	if (size <= 1)
 		return;
 	if (nbr < 0)
+	{
 		ft_putchar('-');
-	
-
+		nbr = -nbr;
+	}
+	put_converted_gt0(nbr, size, base);
 }
