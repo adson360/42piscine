@@ -6,11 +6,16 @@
 /*   By: adsorodr <adsorodr@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/31 14:19:04 by adsorodr          #+#    #+#             */
-/*   Updated: 2024/07/31 21:47:32 by adsorodr         ###   ########.fr       */
+/*   Updated: 2024/07/31 22:42:27 by adsorodr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 int	count_check(char *base)
 {
@@ -36,36 +41,26 @@ int	count_check(char *base)
 	return (i);
 }
 
-void	ft_putchar(char c)
+void	put_converted_gt0(long int lnbr, int size, char *base)
 {
-	write(1, &c, 1);
-}
-
-void	put_converted_gt0(int nbr, int size, char *base)
-{
-	int	temp;
-	if (nbr >= size)
-	{
-		temp = nbr / size;
-		put_converted_gt0(temp, size, base);
-	}
-	ft_putchar(base[nbr % size]);
-	
+	if (lnbr >= size)
+		put_converted_gt0((lnbr / size), size, base);
+	ft_putchar(base[lnbr % size]);
 }
 
 void	ft_putnbr_base(int nbr, char *base)
 {
-	// int		n;
-	int		size;
-	// char	*tmp;
+	long int	lnbr;
+	int			size;
 
+	lnbr = (long int)nbr;
 	size = count_check(base);
 	if (size <= 1)
-		return;
-	if (nbr < 0)
+		return ;
+	if (lnbr < 0)
 	{
 		ft_putchar('-');
-		nbr = -nbr;
+		lnbr = -lnbr;
 	}
-	put_converted_gt0(nbr, size, base);
+	put_converted_gt0(lnbr, size, base);
 }
