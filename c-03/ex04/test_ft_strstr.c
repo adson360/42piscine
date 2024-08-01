@@ -7,8 +7,8 @@
 
 int	main()
 {
-	char	hs[] = "ffffffdfffffffdeffff";
-	char	nd[] = "f ";
+	char	hs[] = "";
+	char	nd[] = "";
 
 	printf("%s\n", strstr(hs, nd));
 	printf("%s\n", ft_strstr(hs, nd));
